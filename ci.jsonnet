@@ -111,7 +111,7 @@
         downloads: {
             JAVA_HOME: {
                 name : "oraclejdk",
-                version : "8u221",
+                version : "8u231",
                 platformspecific: true
             }
         }
@@ -122,7 +122,7 @@
         downloads: {
             JAVA_HOME: {
                 name : "openjdk",
-                version : "8u222",
+                version : "8u232",
                 platformspecific: true
             }
         }
@@ -131,7 +131,7 @@
     # Downstream Graal branch to test against. If not master, then
     # the branch must exist on both graal and graal-enterprise to
     # ensure a consistent downstream code base is tested against.
-    local downstream_branch = "gd/19.1.1-work",
+    local downstream_branch = "me/GR-18709",
 
     Build:: {
         packages+: {

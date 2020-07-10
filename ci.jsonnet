@@ -168,6 +168,7 @@
             # Overlay static libraries
             ["set-export", "OLD_PWD", "${PWD}"],
             ["cd", "${JAVA_HOME_OVERLAY}"],
+            ["cd", "Contents/Home", "||", "true"], # macOS
             ["cp", "-r", ".", "${JAVA_HOME}"],
             ["cd", "${OLD_PWD}"],
         ],

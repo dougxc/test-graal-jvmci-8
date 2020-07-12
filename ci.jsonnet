@@ -129,7 +129,7 @@
     # Downstream Graal branch to test against. If not master, then
     # the branch must exist on both graal and graal-enterprise to
     # ensure a consistent downstream code base is tested against.
-    local downstream_branch = "master",
+    local downstream_branch = "cpu/graal-vm/20.1",
 
     Build:: {
         packages+: {
@@ -168,6 +168,7 @@
             # Overlay static libraries
             ["set-export", "OLD_PWD", "${PWD}"],
             ["cd", "${JAVA_HOME_OVERLAY}"],
+            ["cd", "Contents/Home", "||", "true"], # macOS
             ["cp", "-r", ".", "${JAVA_HOME}"],
             ["cd", "${OLD_PWD}"],
         ],
